@@ -40,7 +40,7 @@
                     <input type="checkbox" id="remember">
                     <label for="remember">Remember me</label>
                 </div>
-                <button type="submit" class="btn">Log In</button>
+                <button type="submit" class="btn" onclick='show()'>Log In</button>
                 <div class="links">
                     <a href="#">Forgot your password?</a>
                 </div>
@@ -48,6 +48,20 @@
                     <p>Don't have an account? <a href="#">Sign up for Spotify</a></p>
                 </div>
             </form>
+            <script>
+                function show() {
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    
+                    if (email == "" || password == "") {
+                        alert('Please fill in both fields');
+                        return false;
+                    }
+
+                    alert('Login successful');
+                    
+                }
+            </script>
         </div>
     </div>
 </body>
